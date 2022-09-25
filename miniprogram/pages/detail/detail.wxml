@@ -1,0 +1,48 @@
+<view class="detail">
+  <!-- 金额输入框 -->
+  <view class="moneyBox {{info.costType}}">
+    <input type="digit" value="{{info.money}}" maxlength="20" bindchange="getNewData" data-type="money" />
+  </view>
+  <!-- 信息列表 -->
+  <view class="infoList">
+    <!-- 左边 图标和标题 -->
+    <view class="infoTitle">
+      <text class="iconfont icon-fenlei income"></text>
+      分类
+    </view>
+    <!-- 右边内容 -->
+    <view class="infoVal">{{info.iconTitle}}</view>
+  </view>
+
+  <picker mode="date" bindchange="getNewData" data-type="date" value="{{info.date}}">
+    <view class="infoList">
+      <!-- 左边 图标和标题 -->
+      <view class="infoTitle">
+        <text class="iconfont icon-riqi pay"></text>
+        日期
+      </view>
+      <!-- 右边内容 -->
+      <view class="infoVal">{{time}}</view>
+    </view>
+  </picker>
+
+  <view class="infoList">
+      <!-- 左边 图标和标题 -->
+      <view class="infoTitle">
+        <text class="iconfont icon-jilu"></text>
+        备注
+      </view>
+      <!-- 右边内容 -->
+      <view class="infoVal">
+        <input type="text" placeholder="备注" value="{{info.comment}}" bindchange="getNewData" data-type="comment"/>
+      </view>
+    </view>
+
+    <!-- 按钮 -->
+    <view class="btnBox">
+      <view class="setBtn" bindtap="setMsgData">编辑</view>
+      <view class="deleteBtn" bindtap="deleteMsgData">删除</view>
+    </view>
+
+
+</view>

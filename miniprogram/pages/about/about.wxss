@@ -1,0 +1,55 @@
+.userInfo{
+   padding: 40rpx 0;
+   background-color: #26b59a;
+   height: 280rpx;
+}
+.userImg{
+   width: 200rpx;
+   height: 200rpx;
+   background-color: #fff;
+   margin: 0 auto;
+   border-radius: 50%;
+}
+.userImg button{
+   width: 100% !important;
+   height: 100% !important;
+   border-radius: 50%;
+   line-height: 200rpx;
+   padding: 0;
+}
+.userImg image{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+}
+.nickname{
+   text-align: center;
+   font-weight: bold;
+   font-size: 36rpx;
+   margin-top: 30rpx;
+}
+.list{
+   padding: 0 30rpx ;
+}
+.item{
+   display: flex;
+   justify-content: space-between;
+   height: 100rpx;
+   line-height: 100rpx;
+   border-bottom: 1px solid #ededed;
+}
+.rightIcon{
+   color: #999;
+}
+.icon-1{
+   color: #26B59A;
+}
+.icon-2{
+   color: #3388FF;
+}
+.icon-3{
+   color: #FFCA28;
+}
+.icon-4{
+   color: #F65130;
+}

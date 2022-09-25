@@ -1,0 +1,57 @@
+.userInfo{
+  padding: 40rpx 0;
+  background-color: #26b59a;
+  height: 280rpx;
+}
+.userImg{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.userImg button{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 200rpx;
+}
+.userImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.userName{
+  text-align: center;
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-top: 30rpx;
+}
+.list{
+  padding: 0 30rpx 40rpx;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDED;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.icon-xiangyou{
+  color: #9FA1A4;
+}
+
+
+.icon-1{
+  color: #FC678F;
+}
+.icon-2{
+  color: #6CABFD;
+}
+.icon-3{
+  color: #FD7361;
+}
+.icon-4{
+  color: #FFBE00;
+}

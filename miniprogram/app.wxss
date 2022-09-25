@@ -1,0 +1,27 @@
+/* 全局样式表 以下所有的类名样式所有都可以用 */
+/* 导入字体图标样式表 */
+@import "./style/iconfont.wxss";
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 收入类 */
+.income{
+  color: #d78485;
+}
+/* 支出类 */
+.pay{
+  color: #26b59a;
+}
+
+/* 支出类 */
+.pay{
+  color: #26b59a;
+}

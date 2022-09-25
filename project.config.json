@@ -1,0 +1,65 @@
+{
+   "miniprogramRoot": "miniprogram/",
+   "cloudfunctionRoot": "cloudfunctions/",
+   "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "enhance": false,
+      "postcss": true,
+      "preloadBackgroundData": false,
+      "minified": true,
+      "newFeature": false,
+      "coverView": true,
+      "nodeModules": false,
+      "autoAudits": false,
+      "showShadowRootInWxmlPanel": true,
+      "scopeDataCheck": false,
+      "uglifyFileName": false,
+      "checkInvalidKey": true,
+      "checkSiteMap": true,
+      "uploadWithSourceMap": true,
+      "useMultiFrameRuntime": true,
+      "useApiHook": true,
+      "useApiHostProcess": true,
+      "babelSetting": {
+         "ignore": [],
+         "disablePlugins": [],
+         "outputPath": ""
+      },
+      "useIsolateContext": true,
+      "useCompilerModule": false,
+      "userConfirmedUseCompilerModuleSwitch": false,
+      "userConfirmedBundleSwitch": false,
+      "packNpmManually": false,
+      "packNpmRelationList": [],
+      "minifyWXSS": true
+   },
+   "appid": "wx8edb0e09a69ef78f",
+   "projectname": "duoduo",
+   "libVersion": "2.15.0",
+   "simulatorType": "wechat",
+   "simulatorPluginLibVersion": {},
+   "condition": {
+      "search": {
+         "list": []
+      },
+      "conversation": {
+         "list": []
+      },
+      "plugin": {
+         "list": []
+      },
+      "game": {
+         "list": []
+      },
+      "miniprogram": {
+         "list": [
+            {
+               "id": -1,
+               "name": "db guide",
+               "pathName": "pages/databaseGuide/databaseGuide"
+            }
+         ]
+      }
+   }
+}

@@ -1,0 +1,53 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/7/19 上午10:57:56
+使用方法：
+在 D:\work\duoduo\miniprogram\pages\chart\chart.wxml 引入模板
+
+```
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\work\duoduo\miniprogram\pages\chart\chart.wxss 中引入样式
+```
+@import "./chart.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="chart-nav">
+      <view class="select-date">
+        <view end="true" mode="date" start="2000-01-01" class="sk-image"></view>
+      </view>
+      <view class="date-type sk-transparent sk-text-26-6667-166 sk-text" style="background-position-x: 50%;">按日查询</view>
+    </view>
+    <view class="type-nav"></view>
+    <view class="pie-box"></view>
+    <view class="type-data">
+      <view is="components/type-data/type-data">
+        <view class="data--type-data" data-_ids="undefined">
+          <view class="data--type-data-icon">
+            <image class="data--auto-img sk-image" mode="widthFix"></image>
+          </view>
+          <view class="data--type-data-item">
+            <view class="data--t1">
+              <view class="data--t1-title"></view>
+              <view class="data--t1-money data--sr sk-transparent sk-opacity">￥</view>
+            </view>
+            <view class="data--b1">
+              <view class="data--progress-box">
+                <view class="data--progress-active" style="background-color: ; width: NaN%;"></view>
+              </view>
+              <view class="data--counts sk-transparent sk-opacity">笔</view>
+            </view>
+          </view>
+          <view class="data--type-data-arrow">
+            <image class="data--auto-img sk-image" mode="widthFix" style="height: 20px;"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

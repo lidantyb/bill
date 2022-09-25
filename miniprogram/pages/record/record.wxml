@@ -1,0 +1,80 @@
+<view class="record">
+  <!-- 头部 收入支出按钮 保存 -->
+  <view class="header">
+    <!-- 收入支出 -->
+    <view class="headerBox">
+      <view class="headerItem {{item.isAct ? 'active' : ''}}" wx:for="{{costTitle}}" wx:key="index" bindtap="titleTap"
+        data-index="{{index}}">{{item.name}}</view>
+
+    </view>
+    <!-- 保存 -->
+    <view class="saveBtn" bindtap="addMsgData">保存</view>
+  </view>
+  <!-- 白色内容区 -->
+  <view class="contentBox">
+    <!-- 金额输入框 -->
+    <view class="priceBox">
+      <input type="digit" value="{{info.money}}" placeholder="0.00" placeholder-class="{{costTitle[0].isAct ? 'pay' : 'income'}}" maxlength="20" class="{{costTitle[0].isAct ? 'pay' : 'income'}}" bindinput="getInfo" data-type="money"/>
+    </view>
+
+    <!-- 图标轮播图 -->
+    <view class="iconBanner">
+      <!-- 支出轮播图 -->
+      <swiper class="iconSwiper" indicator-dots="true" indicator-color="#999999" indicator-active-color="#26b59a" current="{{currentNum}}"
+        wx:if="{{costTitle[0].isAct}}">
+        <swiper-item wx:for="{{bannerIcon.pay}}" wx:key="index">
+          <view class="iconBox clearfix">
+            <!-- 单个图标 -->
+            <view class="iconItem fl {{data.isAct ? 'active' : ''}}" wx:for="{{item}}" wx:for-item="data" wx:for-index="id" wx:key="id" bindtap="bannerIconTap" data-type="pay" data-index="{{index}}" data-id="{{id}}">
+              <!-- 图片 -->
+              <view class="iconImg">
+                <image src="{{data.imgUrl}}">
+                </image>
+              </view>
+              <!-- 标题 -->
+              <view class="iconTitle">{{data.title}}</view>
+            </view>
+          </view>
+        </swiper-item>
+
+      </swiper>
+      <!-- 收入轮播图 -->
+      <swiper class="iconSwiper" indicator-dots="true" indicator-color="#999999" indicator-active-color="#d78485" current="{{currentNum}}"
+        wx:else>
+        <swiper-item wx:for="{{bannerIcon.income}}" wx:key="index">
+          <view class="iconBox clearfix">
+            <!-- 单个图标 -->
+            <view class="iconItem fl {{data.isAct ? 'active' : ''}}" wx:for="{{item}}" wx:for-index="id" wx:for-item="data" wx:key="id" bindtap="bannerIconTap" data-type="income" data-index="{{index}}" data-id="{{id}}">
+              <!-- 图片 -->
+              <view class="iconImg">
+                <image src="{{data.imgUrl}}">
+                </image>
+              </view>
+              <!-- 标题 -->
+              <view class="iconTitle">{{data.title}}</view>
+            </view>
+          </view>
+        </swiper-item>
+
+      </swiper>
+
+    </view>
+  </view>
+
+  <!-- 备注 日期 -->
+  <view class="infoBox">
+    <!-- 日期 -->
+    <picker mode="date" bindchange="getInfo" data-type="date">
+      <view class="infoItem">
+        <text class="iconfont icon-riqi2"></text>
+        <text>{{currentDate}}</text>
+      </view>
+    </picker>
+
+    <!-- 备注 -->
+    <view class="infoItem">
+        <text class="iconfont icon-beizhu1"></text>
+        <input type="text" placeholder="备注" value="{{info.comment}}" bindinput="getInfo" data-type="comment"/>
+      </view>
+  </view>
+</view>

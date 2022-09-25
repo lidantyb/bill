@@ -1,0 +1,42 @@
+{
+   "pages": [
+      "pages/home/home",
+      "pages/chart/chart",
+      "pages/user/user",
+      "pages/about/about",
+      "pages/record/record",
+      "pages/detail/detail",
+      "pages/sort/sort"
+   ],
+   "window": {
+      "navigationBarBackgroundColor": "#26b59a",
+      "navigationBarTextStyle": "black",
+      "navigationBarTitleText": "记账本"
+   },
+   "tabBar": {
+      "list": [
+         {
+            "pagePath": "pages/home/home",
+            "text": "流水",
+            "iconPath": "./image/home.png",
+            "selectedIconPath": "./image/home@act.png"
+         },
+         {
+            "pagePath": "pages/chart/chart",
+            "text": "图表",
+            "iconPath": "./image/chart.png",
+            "selectedIconPath": "./image/chart@act.png"
+         },
+         {
+            "pagePath": "pages/user/user",
+            "text": "我的",
+            "iconPath": "./image/user.png",
+            "selectedIconPath": "./image/user@act.png"
+         }
+      ],
+      "color": "#999999",
+      "selectedColor": "#26b59a"
+   },
+   "sitemapLocation": "sitemap.json",
+   "style": "v2"
+}

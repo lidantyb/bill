@@ -1,0 +1,34 @@
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" /> 
+<view class="chart" wx:else>
+   <view class="chart-nav">
+      <view class="select-date">
+         <picker mode="date" start="2000-01-01" end="{{end}}" bindchange="selectDate">{{date}}</picker>
+      </view>
+      <view class="date-type" bindtap="toggleDateType">按{{dateStatus == 0 ? '年' : dateStatus == 1 ? '月' : '日'}}查询</view>
+   </view>
+   <view>
+
+      <view class="type-nav">
+         <view class="type-nav-item" wx:for="{{subType}}" wx:key="index">
+            <view class="type-nav-title {{activeIndex == index ? 'active-' + item.type : ''}}" data-index="{{index}}"
+               bindtap="toggleSubType">
+               <view>{{dateStatus == 0 ? '年' : dateStatus == 1 ? '月' : '日'}}{{item.title}}</view>
+               <view>￥{{item.money}}</view>
+            </view>
+         </view>
+      </view>
+
+      <view class="pie-box">
+         <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+      </view>
+
+      <view class="type-data">
+         <type-data wx:for="{{bookingData[subType[activeIndex].title].subType}}" wx:key="index" booking="{{item}}"
+            total="{{subType[activeIndex].money}}" bindclicktypedata="goDetail"></type-data>
+            <!-- <type-data></type-data> -->
+            <!-- <type-data></type-data> -->
+      </view>
+
+   </view>
+</view>

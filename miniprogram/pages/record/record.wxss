@@ -1,0 +1,108 @@
+page{
+  background-color: #f0f0f0;
+}
+.header{
+  position: relative;
+  padding: 20rpx 0;
+  background-color: #26b59a;
+}
+.header .headerBox{
+  width: 300rpx;
+  height: 80rpx;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.header .headerBox .headerItem{
+  width: 50%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+}
+/* 收入支出按钮被选中时高亮样式 */
+.header .headerBox .active{
+  background-color: #fff;
+  color: #26b59a;
+}
+/* 保存按钮 */
+.saveBtn{
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  margin-top: -40rpx;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+/* 白色内容区样式 */
+.contentBox{
+  background-color: #fff;
+}
+/* 金额样式 */
+.priceBox{
+  padding: 0 20rpx;
+}
+.priceBox input{
+  font-size: 60rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+/* 轮播图样式 */
+.iconSwiper{
+  height: 400rpx;
+}
+.iconBox{
+  padding: 0 20rpx;
+}
+/* 单个图标样式 */
+.iconItem{
+  margin-top: 20rpx;
+  width: 25%;
+ 
+}
+.iconItem .iconImg{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.iconItem .iconImg image{
+  width: 100%;
+  height: 100%;
+}
+.iconItem .iconTitle{
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  padding-bottom: 10rpx;
+}
+/* 图标的激活样式 */
+.iconBox .active{
+  /* 
+    盒子阴影属性
+    box-shadow: 水平阴影位置 垂直阴影位置 模糊的距离 阴影的大小 阴影颜色
+  */
+  box-shadow: 0 0 10rpx 5rpx #e0e0e0;
+}
+.iconBox .active .iconImg{
+  transform: scale(1.2); /* 缩放属性 参数：倍数  <1: 缩小 >1: 放大*/
+}
+.iconBox .active .iconTitle{
+  color: #000;
+  font-weight: bold;
+}
+/* 备注日期样式 */
+.infoBox{
+  padding: 0 20rpx;
+}
+.infoBox .infoItem{
+  margin-top: 30rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+.infoBox .infoItem .iconfont{
+  margin-right: 20rpx;
+  font-weight: bold;
+}

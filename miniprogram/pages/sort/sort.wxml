@@ -1,0 +1,55 @@
+<view class="home">
+
+  <!-- 内容区 按钮 数据列表 -->
+  <view class="content">
+
+    <!-- 数据列表 -->
+    <view class="dataListBox" wx:if="{{hasData}}">
+
+      <view class="dataList" wx:for="{{arrData}}" wx:key="index">
+        <!-- 日期 收入支出 -->
+        <view class="dataInfo clearfix">
+          <!-- 左边 日期 -->
+          <view class="dataTime fl">
+            <text>{{item.date}}</text>
+            <text>{{item.week}}</text>
+          </view>
+
+          <!-- 右边 收入 支出 -->
+          <view class="dataCost fr">
+            <text>支出:{{item.pay}}</text>
+            <text>收入:{{item.income}}</text>
+          </view>
+
+        </view>
+
+        <!-- 数据 -->
+        <view class="listItem" wx:for="{{item.info}}" wx:for-item="info" wx:for-index="id" wx:key="id" bindtap="navToDetail" data-index="{{info._id}}">
+          <!-- 左边 标题 图标 -->
+          <view class="listLeft">
+            <image src="{{info.iconUrl}}"></image>
+            <text>{{info.iconTitle}}</text>
+          </view>
+
+          <!-- 右边 金额 -->
+          <view class="listRight {{info.costType}}">{{info.costType == 'pay' ? '-' : '+'}}￥{{info.money}}</view>
+
+        </view>
+    
+
+      </view>
+
+    </view>
+
+    <!-- 当页面没有数据的时候,显示样式布局 -->
+    <view class="nothing" wx:else>
+      <view class="nothingIcon">
+        <image src="../../image/nothing.png"></image>
+      </view>
+      <view class="nothingText">还没有流水记录呢...</view>
+    </view>
+
+  </view>
+
+</view>
+

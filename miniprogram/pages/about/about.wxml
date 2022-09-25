@@ -1,0 +1,79 @@
+<view>
+
+<!-- 用户信息 -->
+<view class="userInfo">
+   <!-- 头像 -->
+   <view class="userImg">
+      <image src="{{userInfo.avatarUrl}}" wx:if="{{isAuth}}"></image>
+      <button bindtap="getUserInfo" wx:else>获取头像</button>
+   </view>
+   <!-- 昵称 -->
+   <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+
+<!-- 功能列表 -->
+<view class="list">
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-fenlei icon-4"></text>
+         分类
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-fenlei icon-2"></text>
+         账户
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-shengban-shengji icon-4"></text>
+         升级APP
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-iconyijianfankui icon-3"></text>
+         意见反馈
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-shezhi icon-2"></text>
+         设置
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+   <view class="item">
+      <!-- 左 -->
+      <view class="itemTitle">
+         <text class="iconfont icon-fenxiang icon-1"></text>
+         分享给好友
+      </view>
+      <!-- 右 -->
+      <view class="iconfont icon-xiangyou rightIcon"></view>
+   </view>
+
+</view>
+
+</view>

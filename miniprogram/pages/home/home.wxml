@@ -1,0 +1,94 @@
+<view class="home">
+  <!-- 头部 月份信息 -->
+  <view class="header">
+    <!-- 选择月份 -->
+    <picker mode="date" fields="month" bindchange="selectMonth" disabled="{{!isLogin}}">
+      <view class="headerMon">
+        {{currentMonth}}<text class="iconfont icon-down"></text>
+      </view>
+
+    </picker>
+    <!-- 结余 -->
+    <view class="surplusBox">
+      <view class="surTitle">本月结余</view>
+      <view class="surMoney">{{surPlus}}</view>
+    </view>
+
+    <!-- 支出收入 -->
+    <view class="costBox clearfix">
+      <view class="costItem fl pr">
+        <view class="costTitle">本月支出</view>
+        <view class="costMoney">{{monthCost.pay}}</view>
+      </view>
+      <view class="costItem fr pl">
+        <view class="costTitle">本月收入</view>
+        <view class="costMoney">{{monthCost.income}}</view>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+  <!-- 内容区 按钮 数据列表 -->
+  <view class="content">
+    <!-- 记一笔 按钮 -->
+    <view class="penBox">
+      <view class="penBtn" bindtap="toRecord">
+        <view class="pen">
+          <image src="../../image/pen.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 数据列表 -->
+    <view class="dataListBox" wx:if="{{hasData}}">
+
+      <view class="dataList" wx:for="{{monArrData}}" wx:key="index">
+        <!-- 日期 收入支出 -->
+        <view class="dataInfo clearfix">
+          <!-- 左边 日期 -->
+          <view class="dataTime fl">
+            <text>{{item.date}}</text>
+            <text>{{item.week}}</text>
+          </view>
+
+          <!-- 右边 收入 支出 -->
+          <view class="dataCost fr">
+            <text>支出:{{item.pay}}</text>
+            <text>收入:{{item.income}}</text>
+          </view>
+
+        </view>
+
+        <!-- 数据 -->
+        <view class="listItem" wx:for="{{item.info}}" wx:for-item="info" wx:for-index="id" wx:key="id" bindtap="navToDetail" data-index="{{info._id}}">
+          <!-- 左边 标题 图标 -->
+          <view class="listLeft">
+            <image src="{{info.iconUrl}}"></image>
+            <text>{{info.iconTitle}}</text>
+          </view>
+
+          <!-- 右边 金额 -->
+          <view class="listRight {{info.costType}}">{{info.costType == 'pay' ? '-' : '+'}}￥{{info.money}}</view>
+
+        </view>
+    
+
+      </view>
+
+    </view>
+
+    <!-- 当页面没有数据的时候,显示样式布局 -->
+    <view class="nothing" wx:else>
+      <view class="nothingIcon">
+        <image src="../../image/nothing.png"></image>
+      </view>
+      <view class="nothingText">还没有流水记录呢...</view>
+    </view>
+
+  </view>
+
+</view>
+
